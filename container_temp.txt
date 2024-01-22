@@ -1,0 +1,14 @@
+book_imgs = []
+for i in range(len(books_name)):
+    book_imgs.append(f"""<img src="https://images.unsplash.com/photo-1705630547844-29adf8323f28?q=80&w=1470&auto
+    =format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="pics1"/>""")
+    book_html.append(f"""<a class="book_name" href="http://localhost:3000/sach/{i+1}" target="_self">{books_name[i]}</a>""")
+
+wrap_books_name = f"""
+                <div>
+                    <div class="book_img">{''.join(book_imgs)}</div>
+                    <div class="books_name"> {''.join(book_html)} </div>
+                </div>
+"""
+
+st.markdown(wrap_books_name, unsafe_allow_html=True)
